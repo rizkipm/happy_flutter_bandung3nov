@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'list_wisata.dart';
 
 void main() => runApp(MyApp());
 
@@ -57,7 +58,7 @@ class PageHome extends StatelessWidget {
                   //push : class A ke class B
                   //pop : class B ke class A
                   Navigator.push(context, 
-                  MaterialPageRoute(builder: (context)=>PageSatu() ));
+                  MaterialPageRoute(builder: (context)=>PageSatu()));
 
 
                 },
@@ -69,7 +70,11 @@ class PageHome extends StatelessWidget {
             child: MaterialButton(
                color: Colors.green,
                textColor: Colors.white,
-               onPressed: (){},
+               onPressed: (){
+                  Navigator.push(context, 
+                  MaterialPageRoute(builder: (context)=>PageListWisata()));
+
+               },
                child: Text('List Wisata'),
             ),
 
